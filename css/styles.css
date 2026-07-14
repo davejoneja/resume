@@ -1,0 +1,263 @@
+
+
+:root {
+    color-scheme: light;
+    --resume-width: 720px;
+    --page-gutter: 24px;
+    --ink: #000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: #fff;
+}
+
+@media screen {
+    html {
+        zoom: 1.5;
+    }
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: #fff;
+    font-family: "Computer Modern Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-list a {
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.12em;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration-thickness: 0.1em;
+}
+
+.resume {
+    width: min(calc(100% - (2 * var(--page-gutter))), var(--resume-width));
+    margin: 48px auto 56px;
+}
+
+.resume-header {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.resume-header h1 {
+    margin: 0 0 5px;
+    font-size: 33px;
+    font-variant-caps: all-small-caps;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0 7px;
+    margin: 0;
+    font-size: 13.5px;
+    font-style: normal;
+    line-height: 1.3;
+}
+
+.resume-section {
+    margin-top: 12px;
+}
+
+.resume-section h2 {
+    margin: 0;
+    padding: 0 0 2px;
+    border-bottom: 1px solid var(--ink);
+    font-size: 16px;
+    font-variant-caps: all-small-caps;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.section-copy,
+.compact-details,
+.resume-entry {
+    margin-right: 14px;
+    margin-left: 14px;
+}
+
+.section-copy {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 13.5px;
+}
+
+.resume-entry {
+    margin-top: 7px;
+    margin-right: 7px;
+}
+
+.entry-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    align-items: baseline;
+    gap: 18px;
+}
+
+.entry-row h3,
+.entry-row p,
+.education-entry h3,
+.education-entry p,
+.entry-secondary,
+.role-block h4 {
+    margin: 0;
+}
+
+.entry-primary h3,
+.education-entry h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.entry-primary p {
+    font-size: 15px;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.entry-secondary,
+.education-entry p,
+.role-block h4 {
+    margin-top: 1px;
+    font-size: 13.5px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.role-block {
+    margin-top: 5px;
+}
+
+.resume-entry ul {
+    margin: 3px 0 2px 20px;
+    padding-left: 14px;
+    font-size: 13.5px;
+    line-height: 1.25;
+}
+
+.resume-entry li {
+    margin: 0 0 1px;
+    padding-left: 1px;
+}
+
+.resume-entry li::marker {
+    font-size: 0.7em;
+}
+
+.project-heading + .entry-secondary {
+    margin-top: 1px;
+}
+
+.compact-details {
+    margin-top: 6px;
+    font-size: 13.5px;
+    line-height: 1.25;
+}
+
+.compact-details p {
+    margin: 0 0 1px;
+}
+
+.compact-details strong {
+    font-weight: 700;
+}
+
+.education-entry p {
+    margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --page-gutter: 18px;
+    }
+
+    .resume {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .resume-header h1 {
+        font-size: 30px;
+    }
+
+    .contact-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .contact-separator {
+        display: none;
+    }
+
+    .entry-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .entry-primary p {
+        font-style: italic;
+        white-space: normal;
+    }
+
+    .section-copy,
+    .compact-details,
+    .resume-entry {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+}
+
+@media print {
+    @page {
+        size: letter;
+        margin: 0.5in;
+    }
+
+    body {
+        font-size: 11pt;
+    }
+
+    .resume {
+        width: auto;
+        max-width: none;
+        margin: 0;
+    }
+
+    .resume-section,
+    .resume-entry,
+    .role-block {
+        break-inside: avoid;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
