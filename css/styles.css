@@ -139,13 +139,14 @@ a:focus-visible {
 }
 
 .entry-primary p {
-    font-size: 15px;
+    font-size: 13.5px;
+    font-style: normal;
     line-height: 1.15;
     white-space: nowrap;
 }
 
 .entry-secondary,
-.education-entry p,
+.education-entry > p,
 .role-block h4 {
     margin-top: 1px;
     font-size: 13.5px;
@@ -192,7 +193,7 @@ a:focus-visible {
     font-weight: 700;
 }
 
-.education-entry p {
+.education-entry > p {
     margin-top: 2px;
 }
 
@@ -226,7 +227,7 @@ a:focus-visible {
     }
 
     .entry-primary p {
-        font-style: italic;
+        font-style: normal;
         white-space: normal;
     }
 
