@@ -1,10 +1,12 @@
 
 
 :root {
-    color-scheme: light;
+    color-scheme: light dark;
     --resume-width: 720px;
     --page-gutter: 24px;
-    --ink: #000;
+    --ink: light-dark(#111, #ddd);
+    --bg: light-dark(#fff, #151515);
+    --rule: light-dark(#000, #2a2a2a);
 }
 
 *,
@@ -14,7 +16,8 @@
 }
 
 html {
-    background: #fff;
+    color: var(--ink);
+    background: var(--bg);
 }
 
 @media screen {
@@ -26,7 +29,7 @@ html {
 body {
     margin: 0;
     color: var(--ink);
-    background: #fff;
+    background: var(--bg);
     font-family: "Computer Modern Sans", sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -87,7 +90,7 @@ a:focus-visible {
 .resume-section h2 {
     margin: 0;
     padding: 0 0 2px;
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
     font-size: 16px;
     font-variant-caps: all-small-caps;
     font-weight: 400;
@@ -239,6 +242,13 @@ a:focus-visible {
     @page {
         size: letter;
         margin: 0.5in;
+    }
+
+    :root {
+        color-scheme: light;
+        --ink: #000;
+        --bg: #fff;
+        --rule: #000;
     }
 
     body {
