@@ -97,17 +97,10 @@ a:focus-visible {
     line-height: 1.15;
 }
 
-.section-copy,
 .compact-details,
 .resume-entry {
     margin-right: 14px;
     margin-left: 14px;
-}
-
-.section-copy {
-    margin-top: 6px;
-    margin-bottom: 0;
-    font-size: 13.5px;
 }
 
 .resume-entry {
@@ -124,15 +117,13 @@ a:focus-visible {
 
 .entry-row h3,
 .entry-row p,
-.education-entry h3,
-.education-entry p,
-.entry-secondary,
-.role-block h4 {
+.entry-secondary-row p,
+.project-entry h3 {
     margin: 0;
 }
 
 .entry-primary h3,
-.education-entry h3 {
+.project-entry h3 {
     font-size: 15px;
     font-weight: 700;
     line-height: 1.15;
@@ -145,18 +136,22 @@ a:focus-visible {
     white-space: nowrap;
 }
 
-.entry-secondary,
-.education-entry > p,
-.role-block h4 {
+.entry-secondary-row {
     margin-top: 1px;
+}
+
+.entry-secondary-row p {
     font-size: 13.5px;
     font-weight: 400;
-    font-style: italic;
     line-height: 1.2;
 }
 
-.role-block {
-    margin-top: 5px;
+.entry-secondary-row p:last-child {
+    white-space: nowrap;
+}
+
+.project-entry h3 {
+    margin-bottom: 0;
 }
 
 .resume-entry ul {
@@ -175,8 +170,8 @@ a:focus-visible {
     font-size: 0.7em;
 }
 
-.project-heading + .entry-secondary {
-    margin-top: 1px;
+.coursework-list {
+    margin-top: 4px;
 }
 
 .compact-details {
@@ -191,10 +186,6 @@ a:focus-visible {
 
 .compact-details strong {
     font-weight: 700;
-}
-
-.education-entry > p {
-    margin-top: 2px;
 }
 
 @media (max-width: 600px) {
@@ -226,12 +217,12 @@ a:focus-visible {
         gap: 2px;
     }
 
-    .entry-primary p {
+    .entry-primary p,
+    .entry-secondary-row p:last-child {
         font-style: normal;
         white-space: normal;
     }
 
-    .section-copy,
     .compact-details,
     .resume-entry {
         margin-right: 8px;
@@ -264,7 +255,7 @@ a:focus-visible {
 
     .resume-section,
     .resume-entry,
-    .role-block {
+    .entry-secondary-row {
         break-inside: avoid;
     }
 
