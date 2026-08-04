@@ -42,15 +42,33 @@ a {
     text-decoration: none;
 }
 
+.contact-list a,
+.contact-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
 .contact-list a {
+    text-decoration: none;
+}
+
+.contact-label {
     text-decoration-line: underline;
     text-decoration-thickness: 0.06em;
     text-underline-offset: 0.12em;
 }
 
-a:hover,
-a:focus-visible {
+.contact-list a:hover .contact-label,
+.contact-list a:focus-visible .contact-label {
     text-decoration-thickness: 0.1em;
+}
+
+.contact-icon {
+    width: 1em;
+    flex: 0 0 1em;
+    font-size: 0.95em;
+    text-align: center;
 }
 
 .resume {
