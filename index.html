@@ -1,131 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <title>Dave Joneja | Web Application Developer</title>
-    <meta name="description" content="Resume of Dave Joneja, a web application developer and computer science graduate.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A minimal personal portfolio template.">
+    <title>Dave Joneja</title>
     <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <main class="resume">
-        <header class="resume-header">
-            <h1>Dave Joneja</h1>
+    <header class="site-header">
+        <a class="site-name" href="#" aria-label="Dave Joneja, home">DAVE JONEJA</a>
+    </header>
 
-            <address class="contact-list" aria-label="Contact information">
-                <span class="contact-item">
-                    <i class="fas fa-phone-alt contact-icon" aria-hidden="true"></i>
-                    <span>734.717.8198</span>
-                </span>
-                <span class="contact-separator" aria-hidden="true">|</span>
-                <a href="mailto:jonejd4ve@gmail.com">
-                    <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
-                    <span class="contact-label">jonejd4ve@gmail.com</span>
-                </a>
-                <span class="contact-separator" aria-hidden="true">|</span>
-                <a href="https://github.com/davejoneja" target="_blank" rel="noreferrer" aria-label="Dave Joneja on GitHub">
-                    <i class="fab fa-github contact-icon" aria-hidden="true"></i>
-                    <span class="contact-label">davejoneja</span>
-                </a>
-                <span class="contact-separator" aria-hidden="true">|</span>
-                <a href="https://www.linkedin.com/in/dave-joneja/" target="_blank" rel="noreferrer" aria-label="Dave Joneja on LinkedIn">
-                    <i class="fab fa-linkedin contact-icon" aria-hidden="true"></i>
-                    <span class="contact-label">dave-joneja</span>
-                </a>
-            </address>
-        </header>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        <section class="resume-section" aria-labelledby="education-heading">
-            <h2 id="education-heading">Education</h2>
+    <aside class="menu-panel" id="site-menu" aria-hidden="true">
+        <nav class="primary-nav" aria-label="Primary navigation">
+            <a href="#">RESUME</a>
+            <a href="#">PROJECTS</a>
+            <a href="#">ABOUT ME</a>
+        </nav>
+        <address class="contact-details">
+            <a href="tel:+17347178198">734.717.8198</a>
+            <a href="mailto:jonejd4ve@gmail.com">jonejd4ve@gmail.com</a>
+        </address>
+    </aside>
 
-            <article class="resume-entry">
-                <div class="entry-row entry-primary">
-                    <h3>Northern Illinois University</h3>
-                    <p>Aug. 2022 &ndash; May 2026</p>
-                </div>
-
-                <div class="entry-row entry-secondary-row">
-                    <p><em>Bachelor of Science in Computer Science</em></p>
-                    <p>DeKalb, IL</p>
-                </div>
-
-                <ul class="coursework-list">
-                    <li><strong>Coursework:</strong> Data Structures and Algorithm Analysis, UNIX and Network Programming, Databases, Introduction to Software Engineering, Computer Architecture and Systems Organization, Principles of Operating Systems</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="resume-section" aria-labelledby="experience-heading">
-            <h2 id="experience-heading">Experience</h2>
-
-            <article class="resume-entry">
-                <div class="entry-row entry-primary">
-                    <h3>X-CitE</h3>
-                    <p>Jul. 2026 &ndash; Present</p>
-                </div>
-
-                <div class="entry-row entry-secondary-row">
-                    <p><em>Web Application Developer</em></p>
-                    <p>Remote</p>
-                </div>
-
-                <ul>
-                    <li>Developing X-CitE&rsquo;s local tournament-platform prototype in TypeScript, React, and Next.js, including full-team registration, event rosters, group and playoff brackets, match views, and free-agent listings.</li>
-                    <li>Implementing organizer workflows for group generation, score updates, automatic bracket progression, and recruitment requests; modeled tournament data and added server-rendered route and tournament-logic tests.</li>
-                </ul>
-            </article>
-
-            <article class="resume-entry">
-                <div class="entry-row entry-primary">
-                    <h3>IL-BRFSS System Laboratory</h3>
-                    <p>Oct. 2025 &ndash; Jul. 2026</p>
-                </div>
-
-                <div class="entry-row entry-secondary-row">
-                    <p><em>Northern Illinois University (Part-Time)</em></p>
-                    <p>DeKalb, IL</p>
-                </div>
-
-                <ul>
-                    <li>Completed several full-length health interviews each week by engaging 100+ individuals per day and using active listening to increase willingness to participate, supporting statewide behavioral-health reporting and research.</li>
-                    <li>Helped collect data contributing to a dataset used for public-health trend analysis across multiple Illinois counties.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="resume-section" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Projects</h2>
-
-            <article class="resume-entry project-entry">
-                <h3>Esports Operation Tracker</h3>
-                <ul>
-                    <li>Python command-line tool for recording, prioritizing, searching, updating, and resolving website bugs, registration problems, and tournament incidents for esports organizers.</li>
-                    <li>Persistent issue history and input validation with automated tests for ticket creation, filtering, status changes, and saved-data loading.</li>
-                </ul>
-            </article>
-
-            <article class="resume-entry project-entry">
-                <h3><a href="https://davejoneja.com/" target="_blank" rel="noreferrer">davejoneja.com</a></h3>
-                <ul>
-                    <li>Designed and built a responsive, dependency-free resume website using semantic HTML, CSS Grid, and Flexbox.</li>
-                    <li>Added automatic light/dark theming, mobile layouts, and print-optimized US Letter formatting.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section class="resume-section" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Skills</h2>
-
-            <div class="compact-details">
-                <p><strong>Languages:</strong> Python, C/C++/C#, HTML/CSS, SQL, JavaScript, TypeScript</p>
-                <p><strong>Frameworks/Libraries:</strong> React, Node.js, Next.js, PyTorch, WPF, .NET Framework</p>
-                <p><strong>Tools:</strong> REST APIs, GitHub, Visual Studio, Jira, Docker, AWS</p>
-            </div>
-        </section>
+    <main class="page-content">
+        <p class="placeholder-copy">This website is currently under construction. Check back soon.</p>
     </main>
+
+    <script>
+        const menuButton = document.querySelector('.menu-toggle');
+        const menuPanel = document.querySelector('.menu-panel');
+
+        function setMenu(open) {
+            document.body.classList.toggle('menu-is-open', open);
+            menuButton.setAttribute('aria-expanded', String(open));
+            menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            menuPanel.setAttribute('aria-hidden', String(!open));
+        }
+
+        menuButton.addEventListener('click', () => {
+            setMenu(menuButton.getAttribute('aria-expanded') !== 'true');
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+                setMenu(false);
+            }
+        });
+    </script>
 </body>
 </html>
